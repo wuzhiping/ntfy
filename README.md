@@ -1,5 +1,5 @@
 # ntfy
-https://ntfy.sh/
+[https://ntfy.sh/](https://docs.ntfy.sh/config/)
 <img width="1503" height="1017" alt="ntfy" src="https://github.com/user-attachments/assets/6b656a1b-acd7-4a6c-95ef-d283494cb768" />
 
 ## hermes
