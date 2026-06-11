@@ -1,0 +1,2 @@
+# ntfy
+https://ntfy.sh/
