@@ -1,14 +1,17 @@
 # ntfy
 https://ntfy.sh/
+<img width="1503" height="1017" alt="ntfy" src="https://github.com/user-attachments/assets/6b656a1b-acd7-4a6c-95ef-d283494cb768" />
 
-```hermes
+## hermes
+```
 NTFY_TOPIC=hermes-demo-2026060091100
 NTFY_ALLOWED_USERS=hermes-demo-2026060091100
 NTFY_HOME_CHANNEL=hermes-demo-2026060091100
 NTFY_SERVER_URL=https://ntfy.feg.cn
 ```
 
-```nginx
+## nginx
+```
 server {
     listen 443 ssl http2;
     server_name ntfy.feg.cn;
@@ -46,7 +49,8 @@ server {
 
 ```
 
-```websocket
+## websocket
+```
 
 socket = new WebSocket(
   `wss://ntfy.feg.cn/hermes-demo-2026060091100/ws`
