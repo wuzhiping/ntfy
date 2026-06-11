@@ -4,6 +4,7 @@
 ```markdown
 environment:
   NTFY_AUTH_FILE: /var/lib/ntfy/auth.db
+  NTFY_AUTH_DEFAULT_ACCESS: deny-all
 volumes:
   - ./db:/var/lib/ntfy/
 ```
@@ -19,4 +20,7 @@ ntfy user change-pass phil         # Change password for user phil
 ntfy user change-role phil admin   # Make user phil an admin
 ntfy user change-tier phil pro     # Change phil's tier to "pro"
 ntfy user hash                     # Generate password hash, use with auth-users config option
+
+# 给 abc topic 授予读写权限
+ntfy access phil abc rw
 ```
