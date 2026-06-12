@@ -4,6 +4,7 @@
 
 ## hermes
 <img width="1740" height="1110" alt="b482d2e3d431e83d0d2fdea2ca803334" src="https://github.com/user-attachments/assets/2081579d-f8f0-4809-adfc-024f643fee11" />
+
 ```
 NTFY_TOPIC=hermes-demo-2026060091100
 NTFY_ALLOWED_USERS=hermes-demo-2026060091100
