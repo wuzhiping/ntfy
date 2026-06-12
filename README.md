@@ -3,6 +3,7 @@
 <img width="1503" height="1017" alt="ntfy" src="https://github.com/user-attachments/assets/6b656a1b-acd7-4a6c-95ef-d283494cb768" />
 
 ## hermes
+<img width="1740" height="1110" alt="b482d2e3d431e83d0d2fdea2ca803334" src="https://github.com/user-attachments/assets/2081579d-f8f0-4809-adfc-024f643fee11" />
 ```
 NTFY_TOPIC=hermes-demo-2026060091100
 NTFY_ALLOWED_USERS=hermes-demo-2026060091100
