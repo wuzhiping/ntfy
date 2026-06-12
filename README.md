@@ -8,6 +8,11 @@ NTFY_TOPIC=hermes-demo-2026060091100
 NTFY_ALLOWED_USERS=hermes-demo-2026060091100
 NTFY_HOME_CHANNEL=hermes-demo-2026060091100
 NTFY_SERVER_URL=https://ntfy.feg.cn
+
+
+NTFY_TOPIC=abc
+NTFY_SERVER_URL=https://msn.feg.cn
+NTFY_TOKEN=tk_abc
 ```
 
 ## nginx
