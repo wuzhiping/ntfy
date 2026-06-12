@@ -87,3 +87,77 @@ socket.onerror = (err) => {
   // socket.close();
 };
 ```
+
+## json stream
+```
+const token = "tk_abc";
+
+async function listen() {
+    const response = await fetch(
+        "https://msn.feg.cn/abc/json",
+        {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+    );
+
+    if (!response.ok) {
+        console.error("HTTP Error:", response.status);
+        return;
+    }
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+
+    let buffer = "";
+
+    while (true) {
+        const { value, done } = await reader.read();
+
+        if (done) {
+            console.log("Connection closed");
+            break;
+        }
+
+        buffer += decoder.decode(value, { stream: true });
+
+        let lines = buffer.split("\n");
+        buffer = lines.pop();
+
+        for (const line of lines) {
+            if (!line.trim()) {
+                continue;
+            }
+
+            try {
+                const msg = JSON.parse(line);
+
+                console.log("Received:");
+                console.log(msg);
+
+                // Example:
+                // console.log(msg.message);
+
+            } catch (e) {
+                console.error("Invalid JSON:", line);
+            }
+        }
+    }
+}
+
+async function start() {
+    while (true) {
+        try {
+            await listen();
+        } catch (e) {
+            console.error("Connection error:", e);
+        }
+
+        console.log("Reconnect in 3 seconds...");
+        await new Promise(r => setTimeout(r, 3000));
+    }
+}
+
+start();
+```
