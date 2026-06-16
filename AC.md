@@ -24,4 +24,7 @@ ntfy user hash                     # Generate password hash, use with auth-users
 # 给 abc topic 授予读写权限
 ntfy access phil abc rw
 ntfy token add phil
+
+# Allow anonymous full access to topics "pub_..."
+ntfy access everyone "pub_*" rw
 ```
