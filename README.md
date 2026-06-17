@@ -56,6 +56,17 @@ server {
 
 ```
 
+## anywhere, easy to use
+```
+fetch('https://msn.feg.cn/pub_abc/publish?message=Webhook+triggered')
+
+const eventSource = new EventSource('https://msn.feg.cn/pub_abc,pub_xyz/sse');
+eventSource.onmessage = (e) => {
+  console.log(e.data);
+};
+
+```
+
 ## websocket
 ```
 
